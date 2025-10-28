@@ -2,15 +2,12 @@
 
 This document provides a structured overview of all available API endpoints for the Eiger Adventure Land platform.
 
-
----
-
 ## Endpoint Summary
 
-| No | Endpoint | Method | Description | Auth Required |
-|----|-----------|---------|--------------|----------------|
+| No | Endpoint | Method | Description | Auth Required | Response Codes |
+|----|-----------|---------|--------------|----------------|----------------|
 | 1 | `/users` | GET | Retrieve all registered users | ✅ | 200, 401, 500 |
-| 3 | `/users` | POST | Create a new user | ✅ | 201, 400, 409 |
+| 2 | `/users` | POST | Create a new user | ✅ | 201, 400, 409 |
 
 ## Request and Response Details
 
@@ -26,7 +23,14 @@ This document provides a structured overview of all available API endpoints for 
 
 ### POST `/users`
 **Description:** Create a new user. 
-**Parameters:** None 
+
+**Request Body:**
+| Field      | Type   | Required | Description           |
+| ---------- | ------ | -------- | --------------------- |
+| `name`     | string | Yes      | Full name of the user |
+| `email`    | string | Yes      | User email address    |
+| `password` | string | Yes      | Secure password       |
+
 **Example Request:**
 {
   "name": "Dina",
