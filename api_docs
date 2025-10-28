@@ -1,0 +1,52 @@
+# Eiger Adventure Land - User API Documentation
+
+## Base URL
+https://api.eigeradventureland.com/v1
+
+## Overview
+This API allows clients to retrieve, create, and manage user profiles within the Eiger Adventure Land platform.  
+All requests must be made over HTTPS and require an API key for authentication.
+
+### 1. Get All Users [GET]
+Retrieve a list of all registered users.
+
+**Response:**
+[
+  {
+    "id": 1,
+    "name": "Nadiyya",
+    "email": "nadiyya@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Raka",
+    "email": "raka@example.com"
+  }
+]
+
+### 2. Create New User [POST]
+Create a new user record.
+
+**Request:**
+{
+  "name": "Dina",
+  "email": "dina@example.com",
+  "password": "strongpassword123"
+}
+
+**Response:**
+{
+  "message": "User created successfully",
+  "id": 5
+}
+
+###Version
+API Version: 1.0
+Last Updated: October 2025
+Maintainer: Nadiyya
+
+
+
+
+
+
