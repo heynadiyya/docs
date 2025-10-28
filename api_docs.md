@@ -28,6 +28,14 @@ GET /Users
   }
 ]
 
+**Response Code:**
+| Code | Meaning      |
+| ---- | ------------ |
+| 200  | OK           |
+| 401  | Unauthorized |
+| 500  | Server Error |
+
+
 ### 2. Create New User [POST]
 Create a new user record.
 
@@ -45,6 +53,20 @@ POST /Users
 {
   "message": "User created successfully",
   "id": 5
+}
+
+**Response Code:**
+| Code | Meaning              |
+| ---- | -------------------- |
+| 201  | Created              |
+| 400  | Bad Request          |
+| 409  | Email Already Exists |
+
+**Error Format:**
+All errors follow this format:
+{
+  "error": "Invalid Request",
+  "message": "Missing authentication token"
 }
 
 ### Version
