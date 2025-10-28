@@ -7,8 +7,12 @@ https://api.eigeradventureland.com/v1
 This API allows clients to retrieve, create, and manage user profiles within the Eiger Adventure Land platform.  
 All requests must be made over HTTPS and require an API key for authentication.
 
-### 1. Get All Users [GET]
+## Endpoints
+### 1. Get All Users
 Retrieve a list of all registered users.
+
+**Endpoint:**
+GET /Users
 
 **Response:**
 [
@@ -27,6 +31,9 @@ Retrieve a list of all registered users.
 ### 2. Create New User [POST]
 Create a new user record.
 
+**Endpoint:**
+POST /Users
+
 **Request:**
 {
   "name": "Dina",
@@ -40,7 +47,7 @@ Create a new user record.
   "id": 5
 }
 
-###Version
+### Version
 API Version: 1.0
 Last Updated: October 2025
 Maintainer: Nadiyya
